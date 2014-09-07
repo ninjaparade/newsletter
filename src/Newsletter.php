@@ -18,7 +18,7 @@ class Newsletter
 	{
 		$method = $service.'SubscribeToList';
 		
-		$this->$method(compact('list', 'email'));
+		return $this->$method(compact('list', 'email'));
 		
 	}
 
@@ -26,7 +26,7 @@ class Newsletter
 	{
 		$method = $service.'UnsubscribeFromList';
 		
-		$this->$method(compact('list', 'email'));
+		return $this->$method(compact('list', 'email'));
 		
 	}
 
