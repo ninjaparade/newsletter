@@ -1,6 +1,7 @@
 <?php namespace Ninjaparade\Newsletter\Laravel;
 
 use Illuminate\Support\ServiceProvider;
+use Ninjaparade\Newsletter\Newsletter;
 
 class NewsletterServiceProvider extends ServiceProvider {
 
