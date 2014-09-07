@@ -30,24 +30,24 @@ class Newsletter
 		
 	}
 
-	protected function mailchimpSubscribeToList(array $params = null)
+	protected function mailchimpSubscribeToList(array $params = null, $json = true )
 	{
 		$response = $this->mailchimp->subscribeTo($params);
 
-		if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
-   			
+		if ($json)
+		{
    			return json_encode($response);
 		}
 		
 		return $response;
 	}
 
-	protected function mailchimpUnsubscribeFromList(array $params = null)
+	protected function mailchimpUnsubscribeFromList(array $params = null, $json = true )
 	{
 		$response = $this->mailchimp->unsubscribeFrom($params);
 
-		if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
-   			
+		if ($json)
+		{
    			return json_encode($response);
 		}
 		
