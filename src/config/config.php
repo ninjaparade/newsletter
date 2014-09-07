@@ -4,7 +4,7 @@ return [
 	
 	'mailchimp' => [
 		//set mailchimp api key
-		'apikey' => null,
+		'apikey' => 'null',
 		//the email list ids
 		'emailLists' => [
 
