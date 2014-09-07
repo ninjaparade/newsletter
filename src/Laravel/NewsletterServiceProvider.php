@@ -35,6 +35,8 @@ class NewsletterServiceProvider extends ServiceProvider {
 
 		});
 	}
+		$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+		$loader->alias('Newsletter', 'Ninjaparade\Newsletter\Laravel\Facades\Newsletter');
 
 	/**
 	 * Get the services provided by the provider.
