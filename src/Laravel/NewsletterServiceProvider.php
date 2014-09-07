@@ -28,7 +28,11 @@ class NewsletterServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		
+		$this->app['np_newsletter'] = $this->app->share(function($app)
+		{
+			$config = $app['config']->get('ninjaparade/newsletter::config');
+
+		});
 	}
 
 	/**
