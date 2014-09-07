@@ -19,7 +19,6 @@ class NewsletterServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('ninjaparade/newsletter');
 		$this->package('ninjaparade/newsletter', 'ninjaparade/newsletter', __DIR__.'/..');
 	}
 
@@ -29,15 +28,20 @@ class NewsletterServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register()
-	{
+	{	
 		$this->app['np_newsletter'] = $this->app->share(function($app)
 		{
 			$config = $app['config']->get('ninjaparade/newsletter::config');
 
+			$newsletter = new Newsletter($config);
+
+			return $newsletter;
 		});
-	}
+
 		$loader = \Illuminate\Foundation\AliasLoader::getInstance();
 		$loader->alias('Newsletter', 'Ninjaparade\Newsletter\Laravel\Facades\Newsletter');
+    	
+	}	
 
 	/**
 	 * Get the services provided by the provider.
