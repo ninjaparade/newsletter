@@ -17,7 +17,7 @@ interface NewsletterSubscriptionInterface
      * @param $email
      * @return mixed
      */
-    public function subscribeTo($listName, $email);
+    public function subscribeTo(array $params);
 
     /**
      * Unsubscribe a user from a newsletter list
@@ -26,6 +26,6 @@ interface NewsletterSubscriptionInterface
      * @param $email
      * @return mixed
      */
-    public function unsubscribeFrom($list, $email);
+    public function unsubscribeFrom(array $params);
 
 } 
