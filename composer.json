@@ -1,0 +1,23 @@
+{
+    "name": "ninjaparade/newsletter",
+    "description": "",
+    "authors": [
+        {
+            "name": "Ninjaparade",
+            "email": "ninja@ninjaparade.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Ninjaparade\\Newsletter\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
