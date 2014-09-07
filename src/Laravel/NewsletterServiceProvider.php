@@ -19,6 +19,7 @@ class NewsletterServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('ninjaparade/newsletter');
+		$this->package('ninjaparade/newsletter', 'ninjaparade/newsletter', __DIR__.'/..');
 	}
 
 	/**
